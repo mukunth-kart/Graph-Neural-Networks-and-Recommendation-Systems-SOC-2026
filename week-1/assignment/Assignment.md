@@ -29,7 +29,7 @@ $$e_k = \frac{u_k}{\|u_k\|}$$
 
 ## Part 2: Pandas & Visualization – The Submission Delay Dataset
 
-We have provided a course assignment submission dataset containing roughly 100 anonymous features(named x_*). To simulate real data engineering workflows (and to force you to use your scripting tools instead of opening it in Microsoft Excel), the file is packaged as a Python binary format: `submission_data.pkl`.
+We have provided a course assignment submission dataset containing roughly 100 anonymous features(named x_*). To simulate real data engineering workflows (and to force you to use your scripting tools instead of opening it in Microsoft Excel), the file is packaged as a Python binary format: [`submission_data.pkl`](submission_data.pkl).
 
 ### Phase 1: Data Preparation & Exploration
 

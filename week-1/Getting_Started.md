@@ -29,6 +29,7 @@ Your setup workflow depends on whether you have access to a local GPU:
 * [Matplotlib Tutorial](https://www.youtube.com/watch?v=OZOOLe2imFo)
 * [Seaborn Tutorial](https://www.youtube.com/watch?v=rLVCSmtoA7U)
 * [Scikit-Learn Tutorial](https://www.youtube.com/watch?v=SIEaLBXr0rk)
+* [ML Theory](https://www.youtube.com/playlist?list=PLblh5JKOoLUJUNlfvCNhJMNjNNpt5ljcR)
 
 ### 📓 Notebooks (For Hands-On Learning)
 * [01: Python Variables, Types, and Basic I/O](notebooks/01_python_variables_types_and_basic_io.ipynb) 
@@ -37,6 +38,8 @@ Your setup workflow depends on whether you have access to a local GPU:
 * [04: NumPy Basics](notebooks/04_numpy.ipynb)
 * [05: Matplotlib Basics](notebooks/05_matplotlib.ipynb)
 * [06: Pandas Basics](notebooks/06_pandas.ipynb)
+* [Fun Plots](https://www.kaggle.com/code/mehmet176/starter-iris-species-a85ccd30-a)
+* [sklearn - data pipeline sample](notebooks/basic-sklearn.ipynb)
 
 ### 📚 Official Documentation (For Reference)
 * [NumPy Docs](https://numpy.org/) | [Pandas Docs](https://pandas.pydata.org/) | [Matplotlib Docs](https://matplotlib.org/)
@@ -47,5 +50,7 @@ Your setup workflow depends on whether you have access to a local GPU:
 ## A Bit of Unsolicited Advice...
 
 Don't spend hours debugging cosmetic details in Matplotlib or Seaborn. It’s good to understand how they work, but focus heavily on knowing **which** plot to use for your data and **why**. In modern data science, conceptual understanding, math, and data intuition will always trump memorizing code syntax.
+
+For ML theory playlist, use only what's required for you to complete assignment, a few examples are 18, 19, 27, 32, 41, 50, 52, 59, 60.
 
 Happy Learning! 🚀
