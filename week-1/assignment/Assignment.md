@@ -89,7 +89,7 @@ In your final summary, provide a clear, unambiguous response to the following:
 
 ## Part 4: NumPy in Physics – Simulating Quantum Wavefunctions
 
-To wrap up this assignment, you will step away from data science dataframes and use NumPy to visualize one of the foundational equations of modern quantum mechanics and semiconductor physics: the **1D Time-Independent Schrödinger Equation (TISE)**.(Basically, MA110 PTSD done let's do Ph110 now, on a side note my hands were trembling from my own PTSD while writing this up)
+To wrap up this assignment, you will step away from data science dataframes and use NumPy to visualize one of the foundational equations of classical quantum mechanics and semiconductor physics: the **1D Time-Independent Schrödinger Equation (TISE)**.(Basically, MA110 PTSD done let's do Ph110 now, on a side note my hands were trembling from my own PTSD while writing this up)
 
 The TISE is expressed as:
 
@@ -102,10 +102,10 @@ Assume a simplified system where the potential $V(x) = V$ and total energy $E$ a
 
 Depending on the relative values of $E$ and $V$, the solution to this differential equation changes drastically. Assuming standard physical boundary conditions at $x = 0$, the spatial evolution of the wavefunction behaves as follows:
 
-1. **Classically Allowed Regime ($E > V$):** The particle has enough energy to move freely. The solution is oscillatory:
+1. **Scattering Case ($E > V$):** The particle has enough energy to move freely. The solution is oscillatory:
    $$\psi(x) = \cos(k x) \quad \text{where} \quad k = \sqrt{2(E - V)}$$
 
-2. **Classically Forbidden Regime ($E < V$):** The particle encounters a barrier higher than its energy. In quantum mechanics, it doesn't instantly bounce back; its probability density decays exponentially (quantum tunneling):
+2. **Bound Case ($E < V$):** The particle encounters a barrier higher than its energy. In quantum mechanics, it doesn't instantly bounce back; its probability density decays exponentially (quantum tunneling):
    $$\psi(x) = e^{-\kappa x} \quad \text{where} \quad \kappa = \sqrt{2(V - E)}$$
 
 3. **Critical Threshold ($E = V$):** The kinetic energy is exactly zero, resulting in a linear flat-state:
@@ -164,7 +164,7 @@ Use a spatial domain of $x \in [-5, 5]$ with $N = 500$ points, and set the sprin
 Using **Matplotlib**, create a comprehensive visualization of the quantum well:
 *   Plot the potential well curve $V(x)$ vs $x$ as a background reference line.
 *   Find the lowest three energy levels ($E_0$, $E_1$, $E_2$) and their corresponding wavefunctions ($\psi_0$, $\psi_1$, $\psi_2$).
-*   To make the plot readable, scale the wavefunctions by a visible factor and **shift them vertically** by adding their corresponding energy level value (i.e., plot $E_n + \alpha\psi_n(x)$). Draw a dashed horizontal line at each energy level $E_n$ to serve as a baseline.
+*   To make the plot readable, scale the wavefunctions by a visible factor and **shift them vertically** by adding their corresponding energy level value (i.e., plot $E_n + \alpha \psi_n(x)$). Draw a dashed horizontal line at each energy level $E_n$ to serve as a baseline.
 
 ### Written Summary Requirements (Bonus)
 In your `summary.md` file, provide a brief physical interpretation of your numerical results:
