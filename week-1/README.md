@@ -22,7 +22,7 @@ You will be learning python in a week, to put that in perspective, I learnt pyth
   <img src="as0tpz.jpg" width="350" alt="High Five"/>
 </p>
 
-Anyways, you will be doing only the absolute basics as far as python is considered, to get you used to it there will be coding assignments for every week, with 1st week being heavy in quantity but not much in quality.
+Anyways, you will be doing only the absolute basics as far as python is considered, to get you used to it there will be coding assignments for every week, with 1st week being heavy in quantity.
 
 ---
 
@@ -88,3 +88,7 @@ Other malpractices would be copying code, submitting after deadline, and whateve
     *   Feel free to let us know if the assignment is too much, though we will be keeping it short most of the time. 
     *   Inform early, not @11:58 pm when deadline is 11:59pm. 
     *   **All deadlines are hard** (unless you talk to mentor).
+
+## Getting Started
+
+Move on ahead to [Getting Started](Getting_Started.md).
