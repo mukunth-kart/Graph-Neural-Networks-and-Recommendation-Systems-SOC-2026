@@ -164,7 +164,7 @@ Use a spatial domain of $x \in [-5, 5]$ with $N = 500$ points, and set the sprin
 Using **Matplotlib**, create a comprehensive visualization of the quantum well:
 *   Plot the potential well curve $V(x)$ vs $x$ as a background reference line.
 *   Find the lowest three energy levels ($E_0$, $E_1$, $E_2$) and their corresponding wavefunctions ($\psi_0$, $\psi_1$, $\psi_2$).
-*   To make the plot readable, scale the wavefunctions by a visible factor and **shift them vertically** by adding their corresponding energy level value (i.e., plot $E_n + \alpha \psi _n(x)$). Draw a dashed horizontal line at each energy level $E_n$ to serve as a baseline.
+*   To make the plot readable, scale the wavefunctions by a visible factor and **shift them vertically** by adding their corresponding energy level value (i.e., plot $E_n+\alpha\psi_n(x)$). Draw a dashed horizontal line at each energy level $E_n$ to serve as a baseline.
 
 ### Written Summary Requirements (Bonus)
 In your `summary.md` file, provide a brief physical interpretation of your numerical results:
