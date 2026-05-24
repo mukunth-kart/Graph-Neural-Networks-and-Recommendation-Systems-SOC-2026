@@ -515,10 +515,38 @@ This is especially true for:
 - tree-based ensemble models,
 - highly imbalanced datasets,
 - and behavioral prediction problems where noisy features can dilute meaningful patterns.
-Part-4 : NumPy in Physics – Simulating Quantum Wavefunctions
-Higher energy means larger k which means cosine wave oscillates more rapidly over the same spatial distance leading to a higher oscillation frequency. 
-A rapidly decaying wavefunction means:
-The probability of finding the electron decreases extremely quickly inside the barrier.
-The electron is very unlikely to penetrate deeply into the high-resistance region.
+# Part 4 — NumPy in Physics: Simulating Quantum Wavefunctions
+
+### Files
+- [View Python File](./tise.py)
+
+### Visualization
+![Quantum Wavefunction Plot](./tiseplot.png)
+
+---
+
+## Observations
+
+Higher energy corresponds to a larger wave number \(k\).
+
+As \(k\) increases:
+
+- the cosine wave oscillates more rapidly,
+- more oscillations occur within the same spatial distance,
+- and the wavefunction exhibits a higher oscillation frequency.
+
+This behavior reflects the direct relationship between particle energy and wave-like momentum characteristics in quantum mechanics.
+
+---
+
+## Barrier Penetration Interpretation
+
+A rapidly decaying wavefunction inside the potential barrier indicates that:
+
+- the probability of finding the electron decreases very quickly inside the barrier region,
+- and the electron is highly unlikely to penetrate deeply into the high-resistance region.
+
+This demonstrates the quantum mechanical tunneling behavior predicted by the Time Independent Schrödinger Equation (TISE), where the wavefunction exponentially decays in energetically forbidden regions.
+
 Part-5 : 
 
