@@ -225,19 +225,296 @@ This indicates:
 - and highly reliable ranking performance.
 
 Among all evaluated models, the Random Forest Classifier demonstrates the strongest predictive capability overall.
-Model Selection: 
-Random Forest succeeded here because when we are modelling human behaviour, its not linear, In real-world scenarios, outcomes such as late submissions are often influenced by combinations of interacting factors rather than by a single variable acting alone. Random Forest is built using multiple decision trees that make decisions through a sequence of conditional rules. Each tree learns patterns by repeatedly splitting the data based on feature-based questions.
-This hierarchical decision-making structure allows the model to capture conditional relationships between variables rather than assuming that all features contribute independently and linearly. Random Forest extends this capability further by combining many different decision trees into an ensemble. Each tree learns slightly different patterns from random subsets of the data and features. The final prediction is produced through collective voting across all trees, which improves robustness and reduces overfitting.
-Logistic Regression and Support Vector Machine struggled on this dataset because both models rely on learning a global decision boundary to separate classes.
-Logistic Regression performed poorly on this dataset because the data was highly imbalanced, with far more majority class samples than minority class samples. Logistic Regression learns by minimizing overall prediction error using gradient descent optimization. Since the majority class dominates the dataset, the model can achieve low error simply by predicting most samples as the majority class. During training, the gradients are influenced much more by majority class points, so the model mainly learns patterns belonging to that class while giving less importance to the minority class. As a result, the predicted probability for the minority class often becomes very low, even for actual minority samples. The model essentially takes the “safer” path by favoring majority predictions, causing many minority class instances to be misclassified and leading to poor performance in detecting late submissions.
-SVM performed poorly because the dataset was highly imbalanced, meaning the majority class had many more samples than the minority class. SVM tries to create one global boundary that separates the classes with the maximum margin. Since most data points belonged to the majority class, the boundary was mainly influenced by that larger group. The minority class points were very few and scattered across the feature space, so they did not form a strong, clear pattern for SVM to separate. As a result, the model treated many minority samples as noise or outliers and placed them inside the majority decision region. This caused the minority class to be misclassified frequently, leading to poor performance, especially in detecting late submission behavior.
-Practical Applications: 
-This Random Forest model can be practically used to detect human disengagement patterns that may lead to late submissions or reduced productivity. In real-world environments such as educational institutions or workplaces, disengagement does not usually occur in one single uniform way.ifferent individuals may show different behavioral patterns.Tree-based models like Random Forest are highly effective in capturing these diverse local behavioral patterns because they create multiple decision paths instead of relying on one global relationship. This allows the model to identify small groups of disengaged individuals even when their behaviors differ significantly from one another.Operations teams can use these predictions for early intervention, personalized support, counseling, workload management, or engagement improvement strategies before the disengagement becomes severe and starts affecting overall performance or organizational efficiency.
-More Features:
-When all features were included, Logistic Regression showed a slight improvement, while Random Forest performance decreased slightly. This behavior can be explained by how these models learn patterns from data.
-Logistic Regression improved because adding more features provided additional global information that helped the model better estimate the probability of the minority class. Since Logistic Regression is a linear model, it tries to learn one overall relationship between features and the target variable. Earlier, with fewer features, the model did not have enough information to distinguish late submissions properly, causing it to predict mostly the majority class. After including all features, the model gained access to more behavioral indicators related to disengagement, attendance, workload, or interaction patterns. This slightly improved its ability to detect minority class samples, which is reflected in the increase in AUC-ROC and the non-zero recall and F1-score values. However, the recall is still extremely low, showing that the model still struggles with the class imbalance problem.
-On the other hand, Random Forest performance decreased slightly after including all features because tree-based models are sensitive to noisy, irrelevant, or weakly informative features. Random Forest works by creating many decision trees using random subsets of features. When too many features are added, some trees may start learning unimportant or noisy patterns instead of meaningful disengagement behavior. This can reduce the model’s generalization ability and weaken the strong local decision boundaries it previously formed using the more important features. In highly imbalanced datasets, additional irrelevant features can also make minority class patterns more diluted and harder to isolate consistently across trees. As a result, the recall and F1-score decreased slightly compared to the earlier Random Forest model, even though the overall accuracy remained high.
-This experiment shows that simply adding more features does not always improve performance. Feature quality and relevance are more important than feature quantity, especially for tree-based models handling imbalanced behavioral datasets.
+
+# Model Selection
+
+## Why Random Forest Performed Better
+
+Random Forest performed well on this problem because human behavior is rarely linear.
+
+In real-world scenarios, outcomes such as:
+
+- late submissions,
+- disengagement,
+- or reduced productivity
+
+are usually influenced by combinations of interacting factors rather than by a single independent variable.
+
+Random Forest is built using multiple decision trees that make predictions through sequences of conditional rules.
+
+Each decision tree learns patterns by repeatedly splitting the dataset using feature-based questions.
+
+This hierarchical decision-making structure allows the model to:
+
+- capture conditional relationships between variables,
+- learn complex interactions,
+- and avoid assuming that all features contribute independently and linearly.
+
+---
+
+## Ensemble Learning Advantage
+
+Random Forest further improves this capability through ensemble learning.
+
+Instead of relying on a single decision tree:
+
+- multiple trees are trained,
+- each using random subsets of data and features.
+
+As a result:
+
+- different trees learn different local patterns,
+- prediction robustness increases,
+- overfitting reduces,
+- and generalization performance improves.
+
+The final prediction is generated through collective voting across all trees.
+
+This makes Random Forest highly effective for modeling diverse and non-linear behavioral patterns.
+
+---
+
+## Why Logistic Regression Performed Poorly
+
+Logistic Regression struggled because the dataset was highly imbalanced.
+
+The majority class contained significantly more samples than the minority class.
+
+Logistic Regression learns by minimizing overall prediction error using gradient descent optimization.
+
+Because the majority class dominates the dataset:
+
+- the optimization process mainly focuses on majority-class patterns,
+- minority-class examples contribute very little to gradient updates.
+
+As a result:
+
+- the model learns to favor majority predictions,
+- minority-class probabilities remain very low,
+- and many actual late submissions are misclassified.
+
+In practice, the model effectively chooses the “safer” strategy:
+
+- predicting most samples as belonging to the majority class.
+
+This leads to poor minority-class detection performance.
+
+---
+
+## Why Support Vector Machine (SVM) Performed Poorly
+
+Support Vector Machine also struggled due to class imbalance.
+
+SVM attempts to construct a single global decision boundary that separates classes with maximum margin.
+
+However:
+
+- the majority class heavily influenced the boundary,
+- while minority-class samples were sparse and scattered across the feature space.
+
+Since the minority samples did not form a strong, clearly separable structure:
+
+- SVM treated many minority points as noise or outliers,
+- causing them to fall inside the majority-class decision region.
+
+This resulted in:
+
+- frequent misclassification of minority samples,
+- poor recall performance,
+- and failure to effectively detect late submission behavior.
+
+---
+
+# Practical Applications
+
+## Human Disengagement Detection
+
+The Random Forest model can be practically used to identify human disengagement patterns that may lead to:
+
+- late submissions,
+- reduced productivity,
+- or declining participation.
+
+In real-world environments such as:
+
+- educational institutions,
+- workplaces,
+- or organizational systems,
+
+disengagement rarely appears in one uniform pattern.
+
+Different individuals often display:
+
+- different behavioral signals,
+- different interaction styles,
+- and different progression paths toward disengagement.
+
+---
+
+## Why Tree-Based Models Work Well
+
+Tree-based models like Random Forest are highly effective in such scenarios because:
+
+- they capture multiple local behavioral patterns,
+- instead of relying on one single global relationship.
+
+Multiple decision paths allow the model to:
+
+- detect small groups of disengaged individuals,
+- identify subtle variations in behavior,
+- and adapt to heterogeneous human patterns.
+
+This flexibility makes Random Forest particularly suitable for behavioral prediction tasks.
+
+---
+
+## Real-World Operational Use
+
+Institutions and operational teams can use these predictions for:
+
+- early intervention,
+- personalized support,
+- counseling,
+- workload management,
+- engagement improvement strategies,
+- and productivity monitoring.
+
+Such interventions can occur before disengagement becomes severe enough to negatively impact:
+
+- academic performance,
+- organizational efficiency,
+- or long-term participation outcomes.
+
+This transforms predictive modeling from a purely analytical task into a proactive decision-support system.
+
+
+# More Features
+
+| Model | Accuracy | Precision (Class 1) | Recall (Class 1) | F1-Score (Class 1) | AUC-ROC |
+|---|---|---|---|---|---|
+| Logistic Regression | 0.867284 | 1.00 | 0.022727 | 0.044444 | 0.870455 |
+| Support Vector Machine (SVC) | 0.864198 | 0.00 | 0.000000 | 0.000000 | 0.834334 |
+| Random Forest Classifier | 0.876543 | 0.75 | 0.136364 | 0.230769 | 0.899107 |
+
+---
+
+## Effect of Adding More Features
+
+When all features were included:
+
+- Logistic Regression showed slight improvement.
+- Random Forest performance decreased slightly.
+
+This behavior can be explained by how these models learn patterns from data.
+
+---
+
+## Why Logistic Regression Improved
+
+Logistic Regression improved because the additional features provided more global information that helped the model estimate minority-class probabilities more effectively.
+
+Since Logistic Regression is a linear model:
+
+- it attempts to learn one overall relationship between features and the target variable.
+
+Earlier, with fewer features:
+
+- the model lacked sufficient information to distinguish late submissions properly,
+- causing it to predict mostly the majority class.
+
+After including all features:
+
+- the model gained access to additional behavioral indicators,
+- including patterns related to:
+  - disengagement,
+  - attendance,
+  - workload,
+  - and interaction behavior.
+
+This slightly improved minority-class detection capability.
+
+---
+
+## Evidence of Improvement
+
+The improvement can be observed through:
+
+- increased AUC-ROC score,
+- non-zero Recall,
+- and non-zero F1-score values.
+
+However:
+
+- Recall remains extremely low,
+- indicating that the model still struggles significantly with class imbalance.
+
+Although the model improved slightly, it still fails to identify most late-submission cases reliably.
+
+---
+
+## Why Random Forest Performance Decreased
+
+Random Forest performance decreased slightly after including all features because tree-based models are sensitive to:
+
+- noisy features,
+- irrelevant features,
+- and weakly informative variables.
+
+Random Forest constructs many decision trees using random subsets of features.
+
+When too many features are added:
+
+- some trees may begin learning noisy or unimportant patterns,
+- instead of meaningful disengagement behavior.
+
+This weakens the model’s ability to generalize effectively.
+
+---
+
+## Impact on Decision Boundaries
+
+Earlier, with fewer high-quality features:
+
+- Random Forest formed stronger local decision boundaries.
+
+After adding many additional features:
+
+- minority-class patterns became more diluted,
+- especially within the highly imbalanced dataset.
+
+As a result:
+
+- minority-class samples became harder to isolate consistently across trees.
+
+This caused:
+
+- lower Recall,
+- reduced F1-score,
+- and slightly weaker classification performance overall.
+
+Even though overall accuracy remained high, the model became less effective at detecting late submissions.
+
+---
+
+## Key Insight from the Experiment
+
+This experiment demonstrates an important machine learning principle:
+
+> More features do not always improve model performance.
+
+In many cases:
+
+- feature quality,
+- feature relevance,
+- and signal clarity
+
+are more important than simply increasing feature quantity.
+
+This is especially true for:
+
+- tree-based ensemble models,
+- highly imbalanced datasets,
+- and behavioral prediction problems where noisy features can dilute meaningful patterns.
 Part-4 : NumPy in Physics – Simulating Quantum Wavefunctions
 Higher energy means larger k which means cosine wave oscillates more rapidly over the same spatial distance leading to a higher oscillation frequency. 
 A rapidly decaying wavefunction means:
