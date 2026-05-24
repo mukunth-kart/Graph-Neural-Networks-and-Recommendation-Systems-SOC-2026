@@ -546,7 +546,7 @@ A rapidly decaying wavefunction inside the potential barrier indicates that:
 - the probability of finding the electron decreases very quickly inside the barrier region,
 - and the electron is highly unlikely to penetrate deeply into the high-resistance region.
 
-This demonstrates the quantum mechanical tunneling behavior predicted by the Time Independent Schrödinger Equation (TISE), where the wavefunction exponentially decays in energetically forbidden regions.
+This demonstrates the quantum mechanical tunneling behavior predicted by the Time Independent Schrodinger Equation (TISE), where the wavefunction exponentially decays in energetically forbidden regions.
 
 # Bonus Part - Numerical Quantum Mechanics: The Finite Difference Method
 
