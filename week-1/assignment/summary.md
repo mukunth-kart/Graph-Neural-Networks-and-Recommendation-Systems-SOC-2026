@@ -5,10 +5,8 @@
 **Heatmap Analysis**
 Looking at the heatmap,`Total_Words` and `Total_Characters` are correlated. They have a correlation of 0.99. Features `x_05` and `x_02` also have a high positive correlation (0.78), while `x_54` and `x_74` are basically opposites with a -0.79 correlation. 
 
-When features are this highly correlated, it’s called multi-collinearity. It basically means we are feeding the model the exact same information twice. This is bad because it adds unnecessary data to process, and it confuses simple models since they can't figure out which specific feature is actually responsible for the result.
-
 **UMAP vs. t-SNE**
-UMAP definitely did a better job keeping the overall structure of the data intact. t-SNE kind of stretched everything out, but UMAP grouped the data into nice, tight little islands with lots of space between them. However, inside those islands, the late points (1) and on-time points (0) are completely mixed together. There are no clean, separate clusters for late students.
+UMAP definitely did a better job keeping the overall structure of the data intact. t-SNE kind of stretched everything out, but UMAP grouped the data into little islands with lots of space between them. However, inside those islands, the late points (1) and on-time points (0) are completely mixed together. There are no clean, separate clusters for late students.
 
 **100 Features vs. 15 Features**
 When I plotted the UMAP for just the top 15 features, the overall shape of the islands looked almost exactly the same as the 100-feature version. This tells me that the other 85 features were basically just random noise. Even with the noise gone, the orange and blue dots were still pretty mixed up, which shows that figuring out who will submit late isn't a simple straight-line problem.
