@@ -20,9 +20,4 @@ I low-key hope the math humbles you a little this week — that's the whole poin
 * 🧊 **For the Hardworkers (bonus, ties into Q4):** [Understanding Oversmoothing in GNNs — Google Algorithms Seminar](https://www.youtube.com/watch?v=MLiEoJOhXJA) — a research talk on *why* deep GCNs collapse. Not required, but good if the oversmoothing question hooks you.
 
 ---
-## 💻 The Coding Playground: Same PyG, New Tricks 🧪
-Open `notebooks/GCN_Oversmoothing_Starter.ipynb`. You'll be:
-- Hand-building the normalized adjacency matrix (yes, with self-loops 👀)
-- Writing a GCN layer in raw NumPy before PyG does it for you
-- Watching a GCN literally get *worse* the deeper you stack it (over-smoothing is real, and you'll see it happen)
-
+### Feel free to use AI tools if you get stuck, but make sure you are coding the heavy lifting yourself and actually understand every line you submit
