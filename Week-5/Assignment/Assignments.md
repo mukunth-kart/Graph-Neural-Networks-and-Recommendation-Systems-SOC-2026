@@ -13,7 +13,7 @@ Consider a 3-node path graph: Node 1 — Node 2 — Node 3 (Node 2 connects to b
 
 ---
 
-## 💻 Q2. Implementing One GCN Layer (Easy — coding)
+## 💻 Q2. Implementing One GCN Layer 
 
 1. Using only `numpy`, write a function implementing one GCN layer:
 $$H = \text{ReLU}\left(\hat{A}\, X\, W\right), \quad \hat{A} = \tilde{D}^{-1/2}\tilde{A}\tilde{D}^{-1/2}$$
@@ -22,7 +22,7 @@ $$H = \text{ReLU}\left(\hat{A}\, X\, W\right), \quad \hat{A} = \tilde{D}^{-1/2}\
 
 ---
 
-## 🔍 Q3. Why Do We Need Self-Loops? (Medium — short proof + numerical check)
+## 🔍 Q3. Why Do We Need Self-Loops? 
 
 The paper replaces $(I_N + D^{-1/2}AD^{-1/2})$ with the renormalized $\tilde{D}^{-1/2}\tilde{A}\tilde{D}^{-1/2}$ (self-loops added *before* normalizing).
 
@@ -32,7 +32,7 @@ The paper replaces $(I_N + D^{-1/2}AD^{-1/2})$ with the renormalized $\tilde{D}^
 
 ---
 
-## 📉 Q4. Over-Smoothing in Deep GCNs (Medium — applied notebook)
+## 📉 Q4. Over-Smoothing in Deep GCNs 
 
 Using PyTorch Geometric on the Cora dataset:
 
@@ -49,5 +49,5 @@ Using PyTorch Geometric on the Cora dataset:
 
 * **For Q2, Q3 (Numerical Check), & Q4 (Coding):**
   * put all your code into a single Jupyter Notebook (`Week4_GCNs.ipynb`). 
-  * Make sure to **run all cells** before committing and pushing to GitHub so the graders can see your printed eigenvalues and your over-smoothing plot for Q4 without having to run the code locally.
+  * Make sure to **run all cells** before committing and pushing to GitHub so the graders can see your printed eigenvalues and your over-smoothing plot for Q4 without having to run the code locally.(if you dont understand dont mind we would run it / show all your results in the readme file in the form of ss)
   * share a public Google Colab link at the top of your `README.md`, but make sure the permissions are set to "Anyone with the link can view".
