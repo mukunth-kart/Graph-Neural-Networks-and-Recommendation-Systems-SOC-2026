@@ -1,0 +1,6 @@
+week-7/website/frontend/node_modules
+week-7/website/backend/venv
+week-7/website/backend/__pycache__
+
+.DS_Store
+Thumbs.db
