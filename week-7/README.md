@@ -18,7 +18,7 @@ The core machine learning logic is located in the `backend/` directory. As a dat
 
 ## 🎯 Core Objectives & Expectations
 
-Your main task is to replace the placeholder implementation with a robust graph-based recommendation model.
+Your main task is to replace the placeholder implementation with a robust graph-based recommendation model. Try out different models and report your observations.
 
 ### 1. Implement a Robust GNN Model
 
